@@ -144,7 +144,7 @@ form.default-form {
   margin-bottom: .3em;
   text-align: center;
   background-color: darken($default-main-color, 30%);
-  color: darken($default-main-color, 80%);
+  color: rgba(255,255,255, 0.8);
 }
 
 .sidebar-li {
