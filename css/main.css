@@ -16,13 +16,11 @@ nav, output, section, audio, video {
   outline: none;
   vertical-align: baseline; }
 
-.crate outline {
-  margin 0 auto;
-}
-
 .crate {
   width: 100%;
-  max-width: 1300px; }
+  max-width: 1300px;
+  margin: 0 auto;
+ }
 
 .row:before,
 .row:after {
