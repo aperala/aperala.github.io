@@ -3,8 +3,9 @@
 
 // 'crate' element sets width of entire grid
 .crate {
-  width: 100%;
+  width: 96%;
   max-width: 1300px;
+  margin: 0 auto;
 }
 
 // clearfix hack keeps rows from overflowing onto other rows
