@@ -1,0 +1,76 @@
+@import 'variables';
+@import "mixins";
+
+// 'crate' element sets width of entire grid
+.crate {
+  width: 100%;
+  max-width: 1300px;
+}
+
+// clearfix hack keeps rows from overflowing onto other rows
+.row:before, 
+.row:after {
+  content:"";
+  display: table;
+  clear:both;
+}
+
+// carton is set to 100%, min base column width is 1/6 of 100
+[class*='col-'] {
+  float: left;
+  min-height: 1px; 
+  width: 16.66%; 
+  // gutter
+  padding: 12px;
+  text-align: center; 
+}
+
+// set column option dimensions
+.col-1 { width: 16.66%; }
+.col-2 { width: 33.33%; }
+.col-3 { width: 50%; }
+.col-4 { width: 66.664%; }
+.col-5 { width: 83.33%; }
+.col-6 { width: 100%; }
+
+// add responsiveness for med-sized screens
+@media all and (max-width:800px){
+  .col-1 { width: 33.33%; }
+  .col-2 { width: 50%; }
+  .col-3 { width: 83.33%; }
+  .col-4 { width: 100%; }
+  .col-5 { width: 100%; }
+  .col-6 { width: 100%; }
+
+  .row .col-2:last-of-type{
+      width: 100%; 
+  }
+
+  .row .col-5 ~ .col-1{
+      width: 100%; 
+  }
+}
+
+// responsiveness for small screens
+@media all and (max-width:650px){
+  .col-1 { width: 50%; }
+  .col-2 { width: 100%; }
+  .col-3 { width: 100%; }
+  .col-4 { width: 100%; }
+  .col-5 { width: 100%; }
+  .col-6 { width: 100%; }
+}
+
+// setting border box on all elements inside the crate --*/
+.crate *{
+  box-sizing: border-box; 
+}
+
+
+// some extra column content styling
+[class*='col-'] > p {
+  background-color: $default-paragraph-background; 
+  padding: .5em;
+  font-size: 1.2em;
+  color: $default-font-color; 
+}

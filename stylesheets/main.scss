@@ -1,0 +1,75 @@
+@import 'eggs-framework';
+
+a.icon {
+  margin-right: 30px;
+  color: $ocean;
+}
+
+h3 {
+  text-align: left;
+}
+
+p#bio {
+  text-align: left;
+}
+
+img {
+  width: 80%;
+  display: block;
+  margin: 0 auto 16px auto;
+  }
+
+#logo {
+  width: 40px;
+  float: left;
+  margin: 5px 10px;
+}
+
+.dd-button {
+  @include rounded-button(15px);
+  width: 100px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.typewriter {
+  font-family: 'Special Elite', 'Courier',cursive;
+  font-weight: normal;
+}
+
+#example-rounded {
+  @include rounded-button(15px);
+  width: 70px;
+}
+
+#example-centered-wrapper {
+  width: 70px;
+  height: 70px;
+  border: thin gray solid;
+}
+
+#example-centered {
+  @include vertically-centered-element;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  background: #666666;
+}
+
+div#email {
+  @include rounded-button(15px);
+  width: 100px;
+  height: 50px;
+  margin: 50px auto 100px auto;
+  padding-top: .5em;
+  font-size: 1.5em;
+}
+
+div #photo {
+  height: 500px;
+  background: url("../images/laptop.jpg") no-repeat center center;
+  background-size: cover;
+  opacity: 0.7;
+}

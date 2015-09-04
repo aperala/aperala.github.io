@@ -1,0 +1,7 @@
+// set color options here. default-main-color forms basis for  
+// paragraph background and navbar(in mixins) colors.
+$default-opacity: 0.5;
+$default-main-color: rgba(220, 220, 220, $default-opacity);
+$default-paragraph-background: lighten($default-main-color, 95%);
+$default-font-color: #191919;
+$ocean: #003366;

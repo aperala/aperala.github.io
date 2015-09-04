@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anita Perala</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/main.js"></script>
+	<meta charset="UTF-8">
+</head>
+<body class="speckled-egg-theme">
+
+	<header>
+	  <nav class = "fixed-top-nav">
+	  	<img src="images/logo.png" id="logo" alt="">
+	    <ul>
+	      <li>
+	        <a href="#projects">
+	          Projects
+	        </a>
+	      </li>
+	      <li>
+	        <a href="#about">
+	          About
+	        </a>
+	      </li>
+	      <li>
+	        <a href="#contact">
+	          Contact
+	        </a>
+	      </li>
+	    </ul>
+	  </nav>
+	</header>
+
+	<div class="crate outline">
+
+	  <div class="row">
+			<div class="col-6" id="photo">
+				<div class="col-2">
+					<br><br>
+		      <h1 class="page-header">Anita Perala</h1>
+		      <h5 class="typewriter">I write stuff.</h5><br>
+		      <p class="typewriter">(code, among other things)</p>
+				</div>
+	  	</div>
+		</div>
+
+		<div class="row">
+			<div class="col-6">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-6">
+				<h3 class="typewriter" id="projects">Projects</h3>
+				<br>
+			</div>
+		</div>
+		<!-- bibliocarta project -->
+		<div class="row">
+			<div class="col-3">
+				<h6 class="column-header">Bibliocarta</h6>
+			  <div class="slider">
+					<div class="slide-viewer">
+						<div class="slide-group">
+						  <div class="slide slide-1"><img src="images/bibliocarta-home.jpg" alt=""></div>
+						  <div class="slide slide-2"><img src="images/bibliocarta.jpg" alt=""></div>
+						  <div class="slide slide-3"><img src="images/bibliocarta_users.jpg" alt=""></div>
+						  <div class="slide slide-4"><img src="images/bibliocarta_user_map.jpg" alt=""></div>
+						</div>
+					</div>
+					<div class="slide-buttons"> </div>
+					<p>A Ruby on Rails app that lets readers discover books and create their own reading maps indexed by location</p>
+						<ul class="sidebar">
+					  	<li class="sidebar-li">Database uses sqlite3 and ActiveRecord, CSV file interface for data upload/download</li>
+							<li class="sidebar-li">Mapbox JavaScript API</li> 
+							<li class="sidebar-li">TDD using Rspec and Factory Girl</li>
+							<li class="sidebar-li">Implemented gems: Devise (authentication), Paperclip (image upload), ISBN Validation (data validation), Geocoder (conversion of place names to coordinates)</li>
+							<li class="sidebar-li">Employs Bourbon SASS library, Neat, and Bitters</li>
+						</ul>
+		    </div>
+		  </div>
+
+		<!-- rails blog project -->
+			<div class="col-3">
+				<h6 class="column-header">The Staff Room</h6>
+				<div class="slider">
+				  <div class="slide-viewer">
+				  	<div class="slide-group">
+						  <div class="slide slide-1"><img src="images/staff_room_home.jpg" alt=""></div>
+						  <div class="slide slide-2"><img src="images/staff_room_posts.jpg" alt=""></div>
+						  <div class="slide slide-3"><img src="images/staff_room_profile.jpg" alt=""></div>
+						</div>
+					</div>
+					<div class="slide-buttons"> </div>
+					<p>A Ruby on Rails blog made from scratch (no scaffolding)</p>
+					<br>
+					<ul class="sidebar">
+					  <li class="sidebar-li">Database supports post, user, and comment models using sqlite3 and ActiveRecord</li>
+						<li class="sidebar-li">Implements Paperclip gem to process image uploads</li> 
+					</ul>
+				</div>
+		  </div>
+		</div> <!-- end of row 1 -->
+
+
+		<div class="row">
+		<!-- el born bar project -->
+			<div class="col-3">
+				<h6 class="column-header">El Born Bar</h6>
+				<div class="slider">
+					<img src="images/el_born_bar.jpg" alt="">
+					<br>
+					<p>A collaboratively developed sample business website</p>
+				    <ul class="sidebar">
+				    	<li class="sidebar-li">Uses Ruby on a Sinatra framework</li>
+				    	<li class="sidebar-li">Mandrill API for e-mail delivery</li>
+							<li class="sidebar-li">Phone number validation using regex</li>
+				    </ul>
+				</div> 
+		  </div>
+
+		  <div class=col-3>
+		  	<h6 class="column-header">About this page</h6>
+		  	<div class="slider">
+				  <img src="images/eggs-framework.jpg" alt="">
+				  <br>
+				  <p>
+				  	This page's appearance is adapted from a <a href="https://github.com/aperala/eggs-framework" target="_blank">SASS framework</a> created for a class assignment. 
+				  </p>
+				  <ul class="sidebar">
+				  	<li class="sidebar-li">Responsive design with media queries</li>
+				  	<li class="sidebar-li">Slider functionality based on code from <span class="italic">Javascript & jQuery</span> by Jon Duckett.</li>
+						<li class="sidebar-li">Tonal color scheme for all elements using mixins based on main color variable</li>
+				  </ul>
+				</div>
+		  </div>
+		</div> <!-- end of row 2 -->
+
+		<hr>
+	<!-- about section begins here -->
+		<div class="row">
+			<div class="col-6">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<h3 class="typewriter" id="about">About</h3>
+			</div>
+			<div class="col-3">
+				<p id="bio">
+					What business does someone with a B.A. in English and experience in teaching, publishing, and bookselling have becoming a web developer?<br><br>
+					<span class="typewriter">Good question.</span> 
+					<br><br>
+					Well, I've always liked project-based work. I've managed projects of all sizes, including conferences, trade show exhibits, and print catalog production. Once, I led a team in constructing a seven-foot-long dragon out of wire and fabric.<br><br>
+					As a teacher of English grammar and writing, I'm also fascinated by the syntax and structure of languages. And my experience working with databases like inventory systems and linguistic corpora means I'm eager to further develop my skills using data and data visualization.
+					<br><br>
+					What is a person who needs to be learning new things all the time, who likes to create things—but who also likes to solve puzzles and who is really, really finicky about things like the proper use of semicolons and the value of the Oxford comma—supposed to do?<br><br>
+					<span class="typewriter">Make things for the web.</span> 
+					<br><br>
+					When not in front of my laptop, I will most likely be found reading, exploring New York with my dog, or playing tennis.
+				</p>
+			</div>
+			<div class="col-3">
+				<img src="images/monkey_laptop.gif" alt="">
+				<a href="http://gph.is/1IOA4ND" target="_blank">via GIPHY</a> 
+			</div>
+		</div>
+		<hr>
+<!-- contact info begins here -->
+		<div class="row">
+			<div class="col-6">
+				<h3 class="typewriter" id="contact">Contact</h3>
+			</div>
+			<div class="col-6">
+				<a href="https://twitter.com/apin_NY" target="_blank" class="icon">
+					<i class="fa fa-twitter fa-3x"></i>
+				</a>
+				<a href="https://www.linkedin.com/in/anitaperala" target="_blank" class="icon">
+					<i class="fa fa-linkedin-square fa-3x"></i>
+				</a>
+				<a href="https://www.github.com/aperala" target="_blank" class="icon">
+					<i class="fa fa-github fa-3x"></i>
+				</a>
+				<br>
+				<a href="mailto:anitaperala@gmail.com">
+					<div id="email">
+						e-mail
+					</div>
+				</a>		
+		</div>
+
+		<div class="row">
+			<div class="col-6">
+			</div>
+		</div>
+		
+		<hr>
+<!-- quotations begin here -->
+		<div class="row">
+			<div class="col-2">
+				<p class="quotation">
+					Each artist seems thus to be the native of an unknown country, which he himself has forgotten ... The only true voyage of discovery, the only fountain of Eternal Youth, would be not to visit strange lands but to possess other eyes, to behold the universe through the eyes of another, of a hundred others, to behold the hundred universes that each of them beholds, that each of them is.<br><br>
+					-<a href="http://www.penguinrandomhouse.com/books/136211/in-search-of-lost-time-volume-v-the-captive-and-the-fugitive-by-marcel-proust/" target="_blank">Marcel Proust</a>
+				</p>
+			</div>
+<!-- second quotation -->
+			<div class="col-2">
+				<p class="quotation">
+					Attention is the rarest and purest form of generosity.<br><br>
+					-<a href="http://www.scribd.com/doc/92606158/Simone-Weil-First-and-Last-Notebooks#scribd" target="_blank">Simone Weil</a>
+				</p>
+			</div>
+<!-- third quotation -->
+			<div class="col-2">
+				<p class="quotation">
+					You must never feel badly about making mistakes ... as long as you take the trouble to learn from them. For you often learn more by being wrong for the right reasons than you do by being right for the wrong reasons.<br><br>
+					-<a href="http://www.randomhousekids.com/books/detail/89124-the-phantom-tollbooth?isbn=9780394820378#.VejeS9NViko" target="_blank">Norton Juster</a> 
+				</p>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
