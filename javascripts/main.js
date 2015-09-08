@@ -111,7 +111,7 @@ $(document).ready(function() {
 
   typeLetter = function() {
     var newWidth;
-    iterations += 2;
+    iterations += 1;
     newWidth = iterations * 0.2;
     el.style.width = newWidth + 'em';
     if (iterations <= amtLetters) {
