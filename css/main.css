@@ -273,7 +273,7 @@ form.default-form {
   background-color: rgba(0, 26, 51, 0.5); }
 
 .fixed-top-nav {
-  width: 100%;
+  width: 100vw;
   height: 50px;
   position: absolute;
   top: 0;
@@ -335,7 +335,7 @@ form.default-form {
   line-height: 1.3em; }
 
 .slider {
-  height: 500px;
+  height: 450px;
   padding: 5%;
   background-color: rgba(255, 255, 255, 0.5); }
 
