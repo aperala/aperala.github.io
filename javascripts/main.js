@@ -1,21 +1,3 @@
-function HideElement(){
-  $( ".dd-button-label" ).text( "Close" );
-}
-
-function ShowElement(){
-  $( ".dd-button-label" ).text( "Show" );
-}
-
-function ToggleElement(){
-  $(".dd-button").on('click', function(){
-    $(".drop-down-element").toggle();
-      if($( ".dd-button-label" ).text() == 'Close'){
-      ShowElement();
-    }else {
-      HideElement();
-    }
-  });
-}
 
 $(document).ready(function() {
 // Slider adapted from Javascript & jQuery by Jon Duckett (Wiley, 2014)
@@ -65,7 +47,7 @@ $(document).ready(function() {
         } else {
           move(0);
         }
-      }, 7000);
+      }, 6000);
   }
 
   $.each($slides, function(index) {
@@ -96,32 +78,6 @@ $(document).ready(function() {
         }
     }
   });
-
-  ToggleElement();
-
-// typewriter Codepen via Ian McNally http://codepen.io/imcnally/pen/sfurp
-  (function() {
-  var amtLetters, el, iterations, typeLetter;
-
-  el = document.getElementsByClassName('typed-sentence')[0];
-
-  amtLetters = el.innerHTML.length;
-
-  iterations = 0;
-
-  typeLetter = function() {
-    var newWidth;
-    iterations += 1;
-    newWidth = iterations * 0.2;
-    el.style.width = newWidth + 'em';
-    if (iterations <= amtLetters) {
-      return window.requestAnimationFrame(typeLetter);
-    }
-  };
-
-  window.requestAnimationFrame(typeLetter);
-
-  }).call(this);
 
 });
 
