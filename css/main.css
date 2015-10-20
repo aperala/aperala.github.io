@@ -1,495 +1,369 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain) */
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
-@import url(https://fonts.googleapis.com/css?family=Special+Elite);
-h1, h2, h3, h4, h5, h6, html, body, div, span, object, iframe,
-ol, ul, li, form, input, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, details, embed,
-footer, header, hgroup,
-nav, output, section, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  outline: none;
-  vertical-align: baseline; }
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
-.crate {
-  width: 96%;
-  max-width: 1300px;
-  margin: 0 auto; }
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+body {
+    line-height: 1.7em;
+    color: #7f8c8d;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
 
-.row:before,
-.row:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-[class*='col-'] {
-  float: left;
-  min-height: 1px;
-  width: 16.66%;
-  padding: 12px;
-  text-align: center; }
-
-.col-1 {
-  width: 16.66%; }
-
-.col-2 {
-  width: 33.33%; }
-
-.col-3 {
-  width: 50%; }
-
-.col-4 {
-  width: 66.664%; }
-
-.col-5 {
-  width: 83.33%; }
-
-.col-6 {
-  width: 100%; }
-
-@media all and (max-width: 795px) {
-  .col-1 {
-    width: 33.33%; }
-
-  .col-2 {
-    width: 50%; }
-
-  .col-3 {
-    width: 83.33%; }
-
-  .col-4 {
-    width: 100%; }
-
-  .col-5 {
-    width: 100%; }
-
-  .col-6 {
-    width: 100%; }
-
-  .row .col-2:last-of-type {
-    width: 100%; }
-
-  .row .col-5 ~ .col-1 {
-    width: 100%; } }
-@media all and (max-width: 650px) {
-  .col-1 {
-    width: 50%; }
-
-  .col-2 {
-    width: 100%; }
-
-  .col-3 {
-    width: 100%; }
-
-  .col-4 {
-    width: 100%; }
-
-  .col-5 {
-    width: 100%; }
-
-  .col-6 {
-    width: 100%; } }
-.crate * {
-  box-sizing: border-box; }
-
-[class*='col-'] > p {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: .5em;
-  font-size: 1.2em;
-  color: #191919; }
-
-.crate {
-  width: 96%;
-  max-width: 1300px;
-  margin: 0 auto; }
-
-.row:before,
-.row:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-[class*='col-'] {
-  float: left;
-  min-height: 1px;
-  width: 16.66%;
-  padding: 12px;
-  text-align: center; }
-
-.col-1 {
-  width: 16.66%; }
-
-.col-2 {
-  width: 33.33%; }
-
-.col-3 {
-  width: 50%; }
-
-.col-4 {
-  width: 66.664%; }
-
-.col-5 {
-  width: 83.33%; }
-
-.col-6 {
-  width: 100%; }
-
-@media all and (max-width: 795px) {
-  .col-1 {
-    width: 33.33%; }
-
-  .col-2 {
-    width: 50%; }
-
-  .col-3 {
-    width: 83.33%; }
-
-  .col-4 {
-    width: 100%; }
-
-  .col-5 {
-    width: 100%; }
-
-  .col-6 {
-    width: 100%; }
-
-  .row .col-2:last-of-type {
-    width: 100%; }
-
-  .row .col-5 ~ .col-1 {
-    width: 100%; } }
-@media all and (max-width: 650px) {
-  .col-1 {
-    width: 50%; }
-
-  .col-2 {
-    width: 100%; }
-
-  .col-3 {
-    width: 100%; }
-
-  .col-4 {
-    width: 100%; }
-
-  .col-5 {
-    width: 100%; }
-
-  .col-6 {
-    width: 100%; } }
-.crate * {
-  box-sizing: border-box; }
-
-[class*='col-'] > p {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: .5em;
-  font-size: 1.2em;
-  color: #191919; }
-
-a:link, a:visited {
+a {
   text-decoration: none;
-  color: #003366; }
+}
 
-p > a:hover {
-  text-decoration: underline; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    color: #34495e;
+}
 
-p.quotation {
-  text-align: center; }
+hr {
+  width: 30%;
+  height: 2px;
+  border: 0;
+  background: #8099B2;
+}
 
-h1 {
-  font-size: 76px;
-  font-weight: bold; }
+.pure-g [class *="pure-u"] {
+  font-family: 'Lato', sans-serif;
+}
 
-h2 {
-  font-size: 68px;
-  font-weight: bold; }
+/*
+ * -- LAYOUT STYLES --
+ * These are some useful classes which I will need
+ */
+.l-box {
+    padding: 1em;
+}
 
-h3 {
-  font-size: 60px;
-  font-weight: bold; }
+.l-box-lrg {
+    padding: 2em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
 
-h4 {
-  font-size: 52px;
-  font-weight: bold; }
-
-h5 {
-  font-size: 44px;
-  font-weight: bold; }
-
-h6 {
-  font-size: 36px;
-  font-weight: bold; }
-
-.page-header {
-  color: #003366; }
-
-.speckled-egg-theme {
-  background: linear-gradient(rgba(0, 51, 102, 0.2), rgba(0, 51, 102, 0.2)), url("../images/paper_2X.png");
-  font-family: 'Josefin Sans', sans-serif;
-  color: #191919; }
-
-header {
-  margin-bottom: 50px; }
-
-form.default-form {
-  padding: 5px;
-  background: rgba(255, 255, 255, 0.5); }
-  form.default-form input {
-    display: block;
-    line-height: 1.5em;
-    width: 40%;
-    margin-bottom: 10px; }
-  form.default-form input:focus {
-    border: solid 1px rgba(0, 51, 102, 0.5);
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5); }
-  form.default-form input[type="submit"] {
-    cursor: pointer;
-    border-radius: 15px;
-    padding: 6px 4px;
+.is-center {
     text-align: center;
-    margin: auto auto;
-    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*
+ * -- PURE BUTTON STYLES --
+ * I want my pure-button elements to look a little different
+ */
+.pure-button {
+    background-color: #003366;
     color: white;
-    margin: auto 0 auto auto;
-    width: 80px;
-    border: none; }
-    form.default-form input[type="submit"]:hover {
-      background-color: rgba(0, 0, 0, 0.5); }
-  form.default-form label {
-    float: left;
-    text-align: right;
-    margin-right: 10px;
-    width: 50%; }
+    padding: 0.5em 2em;
+    border-radius: 5px;
+}
 
-.drop-down-element {
-  width: 100%;
-  display: none;
-  padding: 10%;
-  margin: 10px auto 20px auto;
-  background-color: rgba(0, 26, 51, 0.5); }
+/*
+ * -- MENU STYLES --
+ */
 
-.fixed-top-nav {
-  width: 100vw;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.5); }
-  .fixed-top-nav ul {
-    padding-top: .5em;
-    padding-left: 1em;
-    float: right;
-    list-style-type: none; }
-  .fixed-top-nav li {
-    display: inline;
-    margin-right: 1em; }
-  .fixed-top-nav a {
-    padding: .3em;
-    font-size: 20px;
-    text-decoration: none;
-    color: white; }
-    .fixed-top-nav a:hover {
-      -webkit-border-radius: 5px;
-      -o-border-radius: 5px;
-      border-radius: 5px;
-      font-weight: bold;
-      background-color: #fff;
-      color: rgba(0, 0, 0, 0.5); }
+.home-menu {
+  padding: 0.5em;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+.home-menu {
+  background: #003366;
+}
 
+.pure-menu.pure-menu-fixed {
+    /* Fixed menus normally have a border at the bottom. */
+    border-bottom: none;
+    /* I need a higher z-index here because of the scroll-over effect. */
+    z-index: 4;
+}
+
+.home-menu .pure-menu-heading {
+    color: white;
+    font-weight: 400;
+    font-size: 120%;
+}
+
+.home-menu .pure-menu-selected a {
+    color: #389738;
+}
+
+.home-menu a {
+    color: #AECFE5;
+}
+.home-menu li a:hover,
+.home-menu li a:focus {
+    background: none;
+    border: none;
+    color: #389738;
+}
+
+.logo {
+  padding: 0;
+}
+
+/*
+ * -- SPLASH STYLES --
+ * This is the header top section that appears on the page.
+ */
+
+.splash-container {
+    background: #003366;
+    background: url(../images/woods-spratt-med.jpg) no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+    overflow: hidden;
+    /* The following styles are required for the "scroll-over" effect */
+    width: 100%;
+    height: 88%;
+    top: 0;
+    left: 0;
+    position: fixed !important;
+}
+
+.splash {
+    /* absolute center .splash within .splash-container */
+    width: 80%;
+    height: 30%;
+    margin: auto;
+    position: absolute;
+    top: 100px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    background: rgba(255,255,255, 0.5);
+}
+
+/* This is the main heading that appears on the header section */
+.splash-head {
+    font-size: 28px;
+    color: #0E380E;
+    padding: 1em 1.6em;
+    font-weight: 300;
+    line-height: 1em;
+}
+
+/* This is the subheading that appears on the header section */
+.splash-subhead {
+    color: #0E380E;
+    letter-spacing: 0.07em;
+}
+
+/*
+ * -- CONTENT STYLES --
+ * This represents the content area (everything below the head section)
+ */
+.content-wrapper {
+    /* These styles are required for the "scroll-over" effect */
+    position: absolute;
+    top: 87%;
+    width: 100%;
+    min-height: 12%;
+    z-index: 2;
+    background: white;
+
+}
+
+/* This is the class used for the main content headers (<h2>) */
+.content-head {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2em 0 1em;
+}
+
+/* This is a modifier class used when the content-head is inside a ribbon */
+.content-head-ribbon {
+    color: white;
+    text-align: center;
+}
+
+/* This is the class used for the content sub-headers (<h3>) */
+.content-subhead {
+    color: #003366;
+}
+.content-subhead i {
+    margin-right: 7px;
+}
+
+/* This is the class used for the dark-background areas. */
+.ribbon {
+  background: #003366;
+  background: rgba(0, 51, 102, 0.7);
+  color: #fff;
+}
+
+/* This is the class used for the footer */
+.footer {
+  background: #003366;
+  color: #bbb;
+}
+
+.footer a, .footer a:visited {
+  color: #AECFE5;
+}
+
+.footer a:hover {
+  color: #389738;
+}
+
+/*"About" text*/
+#bio {
+  margin: 0 auto;
+  display: block;
+}
+
+/*This is for text to be bold*/
+.bold {
+  font-weight: bold;
+}
+
+/*This is the id for the attribution link*/
+#tollbooth {
+  font-style: italic;
+}
+
+/*Slider css (Javascript & jQuery by Jon Duckett, Wiley 2014)*/
 .slider {
-  height: 500px;
+  margin: 0 auto;
   padding: 5%;
-  background-color: rgba(255, 255, 255, 0.5); }
+  text-align: center;
+  display: block;
+}
 
 .slide-viewer {
   position: relative;
-  overflow: hidden;
-  height: 200px;
-  margin-bottom: 5px; }
+  overflow: hidden; 
+  height: 400px;
+}
 
 .slide-group {
   width: 100%;
   height: 100%;
-  position: relative; }
+  position: relative;
+}
 
 .slide {
   width: 100%;
   height: 100%;
   display: none;
-  position: absolute; }
+  position: absolute;
+}
 
 .slide:first-child {
-  display: block; }
+  display: block;
+}
 
-@media all and (min-width: 568px) and (max-width: 1024px) {
-  h1, h5 {
-    padding: 10px 0 10px 0;
-    background-color: rgba(255, 255, 255, 0.8); }
+.slide h2 {
+  color: #fff;
+}
 
-  h5 {
-    font-size: 24px; }
+.slide a {
+  color: #AECFE5;
+}
 
-  .fixed-top-nav a {
-    margin-right: .5em;
-    font-size: 16px; } }
-.page-header {
-  -webkit-margin-before: 0.67em;
-  -webkit-margin-after: 0.67em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
+.slide-btn {
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #AECFE5;
+}
 
-.sidebar {
-  padding-bottom: .5em;
-  padding-top: .5em;
-  text-align: left;
-  list-style-position: inside; }
+.slide-btn:hover {
+  background: none;
+  color: #389738;
+}
 
-.column-header {
-  padding-top: .3em;
-  padding-bottom: .3em;
-  margin-bottom: .3em;
+/* Social buttons */
+.social {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: rgba(255, 255, 255, 0.8); }
-
-.sidebar-li {
-  padding-left: 2em;
-  line-height: 1.3em; }
-
-@media all and (min-width: 320px) and (max-width: 568px) {
-  h1, h5 {
-    padding: 10px 0 10px 0;
-    background-color: rgba(255, 255, 255, 0.8); }
-
-  h5 {
-    font-size: 24px; }
-
-  .fixed-top-nav a {
-    margin-right: .5em;
-    font-size: 16px; } }
-.page-header {
-  -webkit-margin-before: 0.67em;
-  -webkit-margin-after: 0.67em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
-
-.sidebar {
-  padding-bottom: .5em;
-  padding-top: .5em;
-  text-align: left;
-  list-style-position: inside; }
-
-.column-header {
-  padding-top: .3em;
-  padding-bottom: .3em;
-  margin-bottom: .3em;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: rgba(255, 255, 255, 0.8); }
-
-.sidebar-li {
-  padding-left: 2em;
-  line-height: 1.3em; }
-
-.slider {
-  height: 100%;
-  padding: 5%;
-  background-color: rgba(255, 255, 255, 0.5); }
+  margin-bottom: 30px;
+}
 
 a.icon {
-  margin-right: 30px;
-  color: #003366; }
+  margin: 0 15px 0 15px;
+  color: #003366;
+}
 
-h3 {
-  text-align: center; }
+a.icon:hover {
+  color: #389738;
+}
 
-p#bio {
-  text-align: left; }
+button {
+    margin-top: 30px;
+}
 
-img {
-  width: 80%;
-  display: block;
-  margin: 0 auto 16px auto; }
+button:hover {
+  background: #389738;
+}
 
-#logo {
-  width: 40px;
-  float: left;
-  margin: 5px 10px; }
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em) {
 
-.dd-button {
-  cursor: pointer;
-  border-radius: 15px;
-  padding: 6px 4px;
-  text-align: center;
-  margin: auto auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  width: 100px; }
-  .dd-button:hover {
-    background-color: rgba(0, 0, 0, 0.5); }
+    /* We increase the body font size */
+    body {
+        font-size: 16px;
+    }
+    /* We want to give the content area some more padding */
+    .content {
+        padding: 1em;
+    }
 
-.italic {
-  font-style: italic; }
+    /* We can align the menu header to the left, but float the
+    menu items to the right. */
+    .home-menu {
+        text-align: left;
+    }
+        .home-menu ul {
+            float: right;
+        }
 
-.typewriter {
-  font-family: 'Special Elite', 'Courier',cursive;
-  font-weight: normal; }
+    /* We increase the height of the splash-container */
+/*    .splash-container {
+        height: 500px;
+    }*/
 
-#example-rounded {
-  cursor: pointer;
-  border-radius: 15px;
-  padding: 6px 4px;
-  text-align: center;
-  margin: auto auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  width: 70px; }
-  #example-rounded:hover {
-    background-color: rgba(0, 0, 0, 0.5); }
+    /* We decrease the width of the .splash, since we have more width
+    to work with */
+    .splash {
+        width: 50%;
+        height: 50%;
+    }
 
-#example-centered-wrapper {
-  width: 70px;
-  height: 70px;
-  border: thin gray solid; }
+    .splash-head {
+        font-size: 250%;
+    }
 
-#example-centered {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: 0 auto;
-  width: 50px;
-  height: 50px;
-  background: #666666; }
 
-div#email {
-  cursor: pointer;
-  border-radius: 15px;
-  padding: 6px 4px;
-  text-align: center;
-  margin: auto auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  width: 100px;
-  height: 50px;
-  margin: 50px auto 100px auto;
-  padding-top: .5em;
-  font-size: 1.5em; }
-  div#email:hover {
-    background-color: rgba(0, 0, 0, 0.5); }
+    /* We remove the border-separator assigned to .l-box-lrg */
+    .l-box-lrg {
+        border: none;
+    }
 
-.typed-sentence {
-  width: 0;
-  overflow: hidden;
-  white-space: nowrap; }
+}
 
-div #photo {
-  width: 100%;
-  height: 500px;
-  background: url("../images/laptop.jpg") no-repeat center center;
-  background-size: cover;
-  opacity: 0.7; }
-
-/*# sourceMappingURL=main.css.map */
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+@media (min-width: 78em) {
+    /* We increase the header font size even more */
+    .splash-head {
+        font-size: 300%;
+    }
+}
