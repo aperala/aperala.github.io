@@ -40,6 +40,10 @@ hr {
   font-family: 'Lato', sans-serif;
 }
 
+.pure-img {
+  display: inline;
+}
+
 /*
  * -- LAYOUT STYLES --
  * These are some useful classes which I will need
