@@ -236,56 +236,25 @@ hr {
   font-style: italic;
 }
 
-/*Slider css (Javascript & jQuery by Jon Duckett, Wiley 2014)*/
-.slider {
-  margin: 0 auto;
-  padding: 5%;
+/*portfolio section*/
+.portfolio {
+  margin-bottom: 20px;
+}
+
+#projects {
   text-align: center;
-  display: block;
 }
 
-.slide-viewer {
-  position: relative;
-  overflow: hidden; 
-  height: 400px;
+#projects a:link, a:visited {
+  color: powderblue;
 }
 
-.slide-group {
-  width: 100%;
-  height: 100%;
-  position: relative;
+#projects a:hover {
+  color: lightseagreen;
 }
 
-.slide {
-  width: 100%;
-  height: 100%;
-  display: none;
-  position: absolute;
-}
-
-.slide:first-child {
-  display: block;
-}
-
-.slide h2 {
-  color: #fff;
-}
-
-.slide a {
-  color: #AECFE5;
-}
-
-.slide-btn {
-  padding: 0;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: #AECFE5;
-}
-
-.slide-btn:hover {
-  background: none;
-  color: #389738;
+#projects h2 {
+  color: Gainsboro;
 }
 
 /* Social buttons */
