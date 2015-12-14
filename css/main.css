@@ -152,6 +152,7 @@ hr {
     font-size: 28px;
     color: #0E380E;
     padding: 1em 1.6em;
+    margin-bottom: 0;
     font-weight: 300;
     line-height: 1em;
 }
