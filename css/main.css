@@ -167,6 +167,11 @@ hr {
  * -- CONTENT STYLES --
  * This represents the content area (everything below the head section)
  */
+
+ #bio {
+  text-align: center;
+ }
+
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
@@ -219,6 +224,10 @@ hr {
 
 .footer a:hover {
   color: #389738;
+}
+
+.skill {
+  text-align: center;
 }
 
 /*"About" text*/
