@@ -290,6 +290,11 @@ button:hover {
   background: #389738;
 }
 
+a#hidden-link {
+  text-align: center;
+  color: #003366;
+}
+
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some
