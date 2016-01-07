@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tips and Tricks</title>
+  <link rel="stylesheet" href="../css/tufte.css"/>
+</head>
+<body>
+  <h1>Things to remember in a basic Rails CRUD App</h1>
+  <section>
+    <h2>Generating Models with References</h2>
+    <pre class="code">$ rails generate model reply post:references</pre>
+    <p>The command above generates a migration with a post_id column (and an index on this field).</p>
+  </section>
+  <section>
+    <h2>Adding a Users Controller and Views when Using Devise</h2>
+    <p>
+      In addition to generating a Users Controller, add resources for your desired routes (make sure it's underneath the devise_for line):
+      <pre class="code">
+        #routes.rb
+        devise_for :users
+        resources :users, :only => [:show]
+      </pre>: 
+    </p>
+  </section>
+</body>
+</html>
