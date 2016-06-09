@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chrome Dev Tools Tips</title>
+  <link rel="stylesheet" href="../assets/css/tufte.css"/>
+  <script type="text/javascript" src="https://launcher.zo.la/assets/zbwidget-launcher-0.1.0.js"></script>
+  <script type="text/javascript">
+    zb.init({
+        api_key: '42wpXPKi36QQyw2gpYDpOKIc',
+        store_uid: 'BIBLIOCA',
+        widget_launcher: 'https://launcher.zo.la'
+    });
+</script>
+</head>
+<body>
+  <h1>Chrome Dev Tools Tips and Tricks</h1>
+  <section>
+    <h2>Neat Tricks</h2>
+    <p>Create an array of links from a web page from the console</p>
+    <pre class="code">
+      var links = []
+      var urls = $$('a'); 
+      for (i in urls) links.push(urls[i].href);
+    </pre>
+    <p>In the console, use <code>document.body.contentEditable=true</code> to allow inline content editing.</p>
+  </section>
+
+
+  <section>
+    <h2>Links</h2>
+    <a href="http://www.labnol.org/software/chrome-dev-tools-tutorial/28131/">Tutorial for Non-Developers</a>
+    <p>
+      <a data-zb-launch="info" data-isbn="9780802142849" style="display: inline-block; width: 150px; cursor: pointer; background-color: #6aa84f; border: Transparent; color: #ffffff; text-align: center; border-radius: 5px; line-height: 40px; font-weight: 800;">Buy Now</a>
+    </p>
+  </section>
+
+  <footer>
+    <a href="index.html">Blog home</a>  |
+    <a href="http://anitaperala.com"> anitaperala.com</a>
+  </footer>
+</body>
+</html>
+
+
