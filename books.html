@@ -1,96 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Anita's Production Test Store</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/books.css">
-  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://launcher.zo.la/assets/zbwidget-launcher-0.1.0.js"></script>
-  <script type="text/javascript">
-      zb.init({
-          api_key: '42wpXPKi36QQyw2gpYDpOKIc',
-          store_uid: 'BIBLIOCA',
-          widget_launcher: 'https://launcher.zo.la'
-      });
-  </script>
-</head>
-<body>
+  <head>
+    <title>Zola Test Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    <script type="text/javascript" src="https://launcher-staging.zo.la/assets/zbwidget-launcher-0.1.0.js"></script>
+    <script type="text/javascript">
+        zb.init({
+            api_key: 'I4vZX24XpuZ4RlH0byJf9pW2',
+            store_uid: '201702TE',
+            widget_launcher: 'https://launcher-staging.zo.la'
+        });
+    </script>
 
-  <div class="container-fluid">
-    <h1>Bookstore</h1>
+    <style>
+      .book-btn {
+        display: block;
+        width: 200px;
+        margin: 10px auto 10px auto;
+        cursor: pointer;
+        background-color: #ffffff;
+        border: #000000 2px solid;
+        color: #000000;
+        text-align: center;
+        border-radius: 0px;
+        line-height: 40px;
+        font-weight: 800;
+        white-space: normal;
+      }
+      /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+      .navbar {
+        margin-bottom: 50px;
+        border-radius: 0;
+      }
+      
+      .navbar-inverse .navbar-nav >li>a {
+        color: #b7d47e;
+        cursor: pointer;
+      }
+
+      /* Remove the jumbotron's default bottom margin */ 
+       .jumbotron {
+        margin-bottom: 0;
+        background-color: #f6f2ed;
+      }
+     
+      /* Add a gray background color and some padding to the footer */
+      footer {
+        background-color: #f6f2ed;
+        padding: 25px;
+      }
+
+      /*set panel image size*/
+      .panel-body > img {
+        width: 50%;
+        margin: 0 auto;
+        border-radius: 5px;
+      }
+
+      .panel-footer {
+        background-color: #f6f2ed;
+      }
+    </style>
+  </head>
+  <body>
+
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>Zola Test Page</h1>      
+      <p>Staging Environment</p>
+    </div>
   </div>
 
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#"><img src="" alt=""></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a data-zb-launch="downloads">Download My Books</a></li>
+          <li><a data-zb-launch="history">Order History</a></li>
+          <li><a data-zb-launch="account"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+          <li><a data-zb-launch="cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">    
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">SQUIRREL MEETS CHIPMUNK</div>
+          <div class="panel-body">
+            <img src="https://api-staging.zo.la/v4/image/display?id=9780316131278&w=240" class="img-responsive" alt="Image">
+          </div>     
+          <div class="panel-footer"> 
+            <a data-zb-launch="info" data-isbn="9780316131278" class="btn book-btn"><span>BUY EBOOK - DRM</span></a>
+            <a data-zb-launch="info" data-isbn="9780316038409" class="btn book-btn"><span>Paperback</span></a>
+            <a data-zb-launch="info" data-isbn="9781607886464" class="btn book-btn"><span>Audio</span></a>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">THE TIME TRAVELER'S WIFE</div>
+          <div class="panel-body"><img src="https://api-staging.zo.la/v4/image/display?id=9781476764832&w=240" class="img-responsive" alt="Image"></div>
+          <div class="panel-footer">
+            <a data-zb-launch="info" data-isbn="9781476764832" class="btn book-btn"><span>Paperback</span></a>
+            <a data-zb-launch="info" data-isbn="9781939126016" class="btn book-btn"><span>Ebook - SDRM</span></a>
+            <a data-zb-launch="info" data-isbn="9781611744293" class="btn book-btn"><span>Digital Audio</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">PRE-ORDER</div>
+          <div class="panel-body">
+            <img src="https://api-staging.zo.la/v4/image/display?id=9780393249385&w=240" class="img-responsive" alt="Image">
+          </div>
+          <div class="panel-footer">
+            <a data-zb-launch="info" data-isbn="9780393249385" class="btn book-btn"><span>Pre-order Hardcover</span></a>
+            <!-- <a data-zb-launch="info" data-isbn="9780698197695" class="btn book-btn"><span>Pre-order Ebook</span></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="container">    
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">FREE DOWNLOAD</div>
+          <div class="panel-body">
+            <img src="https://api-staging.zo.la/v4/image/display?id=9633357784666&w=240" class="img-responsive" alt="Image">
+          </div>
+          <div class="panel-footer">
+            <a data-zb-launch="info" data-isbn="9633357784666" class="btn book-btn"><span>Free Download</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">BULK DISCOUNT</div>
+          <div class="panel-body">
+            <img src="https://api-staging.zo.la/v4/image/display?id=9781497658653&w=240" class="img-responsive" alt="Image">
+          </div>
+          <div class="panel-footer">
+            <a data-zb-launch="info" data-isbn="9781497658653" class="btn book-btn"><span>Buy Now</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">LOCAL FULFILLMENT</div>
+          <div class="panel-body"><img src="https://api-staging.zo.la/v4/image/display?id=9780452284234&w=240" class="img-responsive" alt="Image"></div>
+          <div class="panel-footer">
+            Collectible Edition
+            <a data-zb-launch="info" data-isbn="9780452284234" class="btn book-btn"><span>Buy Now</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+
+  <div class="container">    
+    <div class="row">
+        <div class="col-sm-4"> 
+          <div class="panel panel-primary">
+            <div class="panel-heading">BUNDLE</div>
+            <div class="panel-body"><img src="https://api-staging.zo.la/v4/image/display?id=9780307455925&w=240" class="img-responsive" alt="Image"></div>
+            <div class="panel-footer">
+              <a data-zb-launch="list-auto-add" data-isbn="9780307455925,9781400095209" class="btn book-btn"><span>Buy 2 Books</span></a>
+            </div>
+          </div>
+        </div>
+
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">REDEMPTION CODE</div>
+          <div class="panel-body">
+            <img src="https://api-staging.zo.la/v4/image/display?id=9781497658653&w=240" class="img-responsive" alt="Image">
+            </div>
+          <div class="panel-footer">
+            <h4 class="text-center">Enter Your Code</h4>
+            <div class="input-group text-center" style="margin:0 auto;">
+              <input type="text" data-pcode="" style="width: 200px;">
+              <div data-zb-launch="cart" data-isbn="9781497658653" class="btn book-btn">
+                <span>Redeem</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">LAUNCHER OPTIONS</div>
+          <div class="panel-body">
+            <img src="https://api-staging.zo.la/v4/image/display?id=9780316776967&w=240" class="img-responsive" alt="Image">
+          </div>     
+          <div class="panel-footer"> 
+            <a data-zb-launch="info" data-isbn="9780316073653" class="btn book-btn"><span>Launch to Info</span></a>
+            <a data-zb-launch="cart" data-isbn="9780316776967" class="btn book-btn"><span>Add Book to Cart</span></a>
+            <a data-zb-launch="list" data-isbn="9780316776967" class="btn book-btn"><span>Go to list</span></a>
+             <a data-zb-launch="message" data-isbn="9780316776967" class="btn book-btn"><span>Go to custom tab</span></a>
+            <a data-zb-launch="digital-only" data-isbn="9780316038409" class="btn book-btn"><span>Launch to Ebook from Paperback</span></a>
+            <a data-zb-launch="preview" data-isbn="9780316776967" class="btn book-btn"><span>Read an excerpt</span></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div><br>
   <div class="container">
     <div class="row">
-    <!-- Time Traveler's Wife -->
-      <div class="col-md-2 outlined">
-        <h4>The Time Traveler's Wife</h4>
-        <div class="row">
-          <a data-zb-launch="info" data-isbn="9781476764832" class="book-btn m-t-10">Paperback</a>
-        </div>
-        <div class="row">
-          <a data-zb-launch="info" data-isbn="9781939126016" class="book-btn m-t-10">Ebook</a>
-        </div>
-        <div class="row">
-          <a data-zb-launch="info" data-isbn="9781611744309" class="book-btn m-t-10">Audio CD</a>
-        </div>
-      </div>
-    <!-- Isaac Marion Column -->
-      <div class="col-md-2 outlined">
-        <h4>Joan Didion</h4>
-        <div class="row">
-          <h5>Miami</h5>
-          <a data-zb-launch="info" data-isbn="9780679781806" class="book-btn m-t-10">Paperback</a>
-          <a data-zb-launch="info" data-isbn="9781939126153" class="book-btn m-t-10">Ebook</a>
-        </div>
-      </div>
-    <!-- Scott Carney -->
-      <div class="col-md-2 outlined">
-        <div class="row">
-          <h4>Hardcover</h4>
-          <a data-zb-launch="info" data-isbn="9780061936463" class="book-btn m-t-10">The Red Market</a>
-        </div>
-      </div>
-    <!-- The Girl on the Train -->
-      <div class="col-md-2 outlined">
-        <div class="row">
-          <h4>The Girl on the Train</h4>
-          <a data-zb-launch="info" data-isbn="9781594633669" class="book-btn m-t-10">Hardcover</a>
-          <a data-zb-launch="info" data-isbn="9780698185395" class="book-btn m-t-10">Ebook</a>
-        </div>
-      </div>
-    <!-- Free Download -->
-      <div class="col-md-2 outlined">
-        <h4>Moby-Dick Free Download</h4>
-        <a data-zb-launch="info" data-isbn="9633357784666" class="book-btn m-t-10">Free Download</a>
-      </div>
-    </div> <!-- end row -->
+      <!--  iframe embed -->
+      <iframe width="295" height="600" src="https://widget-staging.zo.la/#/20170111/a3JqFa0jpgwpM234HJMatGQ5/book/9781250061638/description/"></iframe>
+       <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">PRE-ORDERS</div>
+          <div class="panel-body">
+            <img src="https://api-staging.zo.la/v4/image/display?id=9781619029118&w=240" class="img-responsive" alt="Image">
+          </div>     
+          <div class="panel-footer"> 
+            <a data-zb-launch="info" data-isbn="9780814437698" class="btn book-btn"><span>Street Smart 1 week</span></a>
+            <a data-zb-launch="info" data-isbn="9781619029118" class="btn book-btn"><span>Feb 14 non-strict</span></a>
+            <a data-zb-launch="info" data-isbn="9781401268008" class="btn book-btn"><span>Feb 14 Street Smart</span></a>
+            <a data-zb-launch="info" data-isbn="9780718086275" class="btn book-btn"><span>Feb 21 non-strict</span></a>
+            <a data-zb-launch="info" data-isbn="9780815729532" class="btn book-btn"><span>Feb 28 non-strict</span></a>
+            <a data-zb-launch="info" data-isbn="9780399556258" class="btn book-btn"><span>Feb 28 Street Smart</span></a>
+            <a data-zb-launch="info" data-isbn="9781250060013" class="btn book-btn"><span>March 7 non-strict</span></a>
+            <a data-zb-launch="info" data-isbn="9781501123658" class="btn book-btn"><span>March 7 Street Smart</span></a>
+            <a data-zb-launch="info" data-isbn="9781250103505" class="btn book-btn"><span>March 14 Street Smart</span></a>
+            <a data-zb-launch="info" data-isbn="9781250074652" class="btn book-btn"><span>March 14, non-strict</span></a>
+            <a data-zb-launch="info" data-isbn="9780062497772" class="btn book-btn"><span>March 21, non-strict</span></a>
+            <a data-zb-launch="info" data-isbn="9780393249385" class="btn book-btn"><span>March 21, Street Smart</span></a>
+             <a data-zb-launch="info" data-isbn="9780062397690" class="btn book-btn"><span>March 28, non-strict</span></a>
+            <a data-zb-launch="info" data-isbn="9780385540476" class="btn book-btn"><span>March 28, Street Smart</span></a>
+          </div>
 
-    <div class="row">
-    <!-- Squirrel Meets Chipmunk -->
-      <div class="col-md-2 outlined">
-        <h4>Squirrel Meets Chipmunk</h4>
-        <a data-zb-launch="info" data-isbn="9780316131278" class="book-btn m-t-10">Ebook</a>
-        <a data-zb-launch="info" data-isbn="9780316038409" class="book-btn m-t-10">Paperback</a>
-        <a data-zb-launch="info" data-isbn="9780316038393" class="book-btn m-t-10">Hardcover</a>
-        <a data-zb-launch="info" data-isbn="9781607886464" class="book-btn m-t-10">Audio</a>
+        </div>
       </div>
-
-    <!-- Launch to Ebook using Print ISBN -->
-      <div class="col-md-2 outlined">
-        <h4>Mary Roach</h4>
-        <a data-zb-launch="info" data-isbn="9780393069198" class="book-btn m-t-10">Buy Ebook</a>
-      </div>
-       <!-- Preorder -->
-      <div class="col-md-2 outlined">
-        <h4>Pre-order ebook bulk</h4>
-        <a data-zb-launch="info" data-isbn="9781504041966" class="book-btn m-t-10">Pre-order Ebook</a>
-      </div>
-    </div> <!-- end row -->
-  </div> <!-- end container -->
-
-</body>
+    </div>
+  </div>
+  <footer class="container-fluid text-center">
+    <a href="#">Return to top</a>  
+  </footer>
+  </body>
 </html>
